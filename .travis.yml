@@ -3,6 +3,7 @@ python:
   - "2.7"
   - "3.3"
   - "3.4"
+  - "3.10"
 install:
   - ./setup.py develop
 script: ./setup.py test

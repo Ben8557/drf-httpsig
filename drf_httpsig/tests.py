@@ -106,7 +106,7 @@ class SignatureAuthenticationTestCase(TestCase):
         request = RequestFactory().get(
             '/packages/measures/', {},
             HTTP_HOST='localhost:8000',
-            HTTP_DATE='Mon, 17 Feb 2014 06:11:05 GMT',
+            HTTP_DATE='Thu, 12 May 2022 07:46:05 GMT',
             HTTP_ACCEPT='application/json',
             HTTP_AUTHORIZATION=expected_signature_string)
             
@@ -125,7 +125,7 @@ class SignatureAuthenticationTestCase(TestCase):
         request = RequestFactory().get(
             '/packages/measures/', {},
             HTTP_HOST='localhost:8000',
-            HTTP_DATE='Mon, 17 Feb 2014 06:11:05 GMT',
+            HTTP_DATE='Thu, 12 May 2022 07:46:05 GMT',
             HTTP_ACCEPT='application/json',
             HTTP_AUTHORIZATION=expected_signature_string)
 

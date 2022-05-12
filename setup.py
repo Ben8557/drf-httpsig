@@ -26,6 +26,7 @@ setup(
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
@@ -39,8 +40,8 @@ setup(
     setup_requires=['pytest-runner', 'setuptools_scm'],
     tests_require=['pytest', 'pytest-django'],
     install_requires=[
-        'djangorestframework<3',
-        'django<=1.7',
+        'djangorestframework==3.13.1',
+        'django==4.0.4',
         'httpsig<2'
     ]
 )

@@ -15,7 +15,7 @@ The HTTP Signature scheme provides a way to achieve origin authentication and me
 Requirements
 ------------
 
-* Python 2.7, 3.3+ (currently tested up to 3.4)
+* Python 2.7, 3.3+ (currently tested up to 3.10)
 * `httpsig`_
 
 
@@ -106,8 +106,8 @@ Example Usage and Session w/cURL
 Assuming the setup detailed above, a project running on ``localhost:8000`` could be probed with cURL as follows::
 
     # Pre-calculate this first bit.
-    ~$ SSS=Base64(Hmac(SECRET, "Date: Mon, 17 Feb 2014 06:11:05 GMT", SHA256))
-    ~$ curl -v -H 'Date: "Mon, 17 Feb 2014 06:11:05 GMT"' -H 'Authorization: Signature keyId="my-key",algorithm="hmac-sha256",headers="date",signature="SSS"'
+    ~$ SSS=Base64(Hmac(SECRET, "Date: Thu, 12 May 2022 07:46:05 GMT", SHA256))
+    ~$ curl -v -H 'Date: "Thu, 12 May 2022 07:46:05 GMT"' -H 'Authorization: Signature keyId="my-key",algorithm="hmac-sha256",headers="date",signature="SSS"'
 
 And, with much less pain, using the modules ``requests`` and ``httpsig``:
 
@@ -123,7 +123,7 @@ And, with much less pain, using the modules ``requests`` and ``httpsig``:
     headers = {
       'Host': 'localhost:8000',
       'Accept': 'application/json',
-      'Date': "Mon, 17 Feb 2014 06:11:05 GMT"
+      'Date': "Thu, 12 May 2022 07:46:05 GMT"
     }
 
     auth = HTTPSignatureAuth(key_id=KEY_ID, secret=SECRET,

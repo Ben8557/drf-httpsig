@@ -13,7 +13,7 @@ hs = HeaderSigner(KEYID, SECRET, "hmac-sha256", headers)
 
 unsigned = {
     'Host': 'localhost:8000',
-    'Date': 'Mon, 17 Feb 2014 06:11:05 GMT',
+    'Date': 'Thu, 12 May 2022 07:46:05 GMT',
     'Accept': 'application/json',
 }
 signed = hs.sign(unsigned, method="GET", path='/packages/measures/')
